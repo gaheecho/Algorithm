@@ -2,30 +2,30 @@
   가장 얇은 지갑 만들기#1
 */
 
-let paper = [17, 11, 7, 1];
+let paperMoney = [17, 11, 7, 1];
 
-let makeThinWallet = (inputPaper) => {
+let makeThinWallet = (inputPaperMoney) => {
 
-  inputPaper = inputPaper / 10000;
+  inputPaperMoney = inputPaperMoney / 10000;
 
-  let countPaper = [0, 0, 0, 0];
+  let paperMoneyCount = [0, 0, 0, 0];
 
-  while(inputPaper > 0) {
+  while(inputPaperMoney > 0) {
 
-    let temp = [];
+    let temporaryStorage = [];
 
-    for(let index = 0; index < paper.length; index++) {
+    for(let index = 0; index < paperMoney.length; index++) {
 
-      temp.push((inputPaper % paper[index]) + (inputPaper / paper[index]));
+      temporaryStorage.push((inputPaperMoney % paperMoney[index]) + (inputPaperMoney / paperMoney[index]));
 
     }
 
-    let minimumIndex = temp.indexOf(Math.min.apply(null, temp));
-    countPaper[minimumIndex]++;
-    inputPaper = inputPaper - paper[minimumIndex];
+    let minimumIndex = temporaryStorage.indexOf(Math.min.apply(null, temporaryStorage));
+    paperMoneyCount[minimumIndex]++;
+    inputPaperMoney = inputPaperMoney - paperMoney[minimumIndex];
 
   }
 
-  return '17만원:' + countPaper[0]+ ', 11만원:' + countPaper[1] +', 7만원:'+ countPaper[2] + ', 1만원' + countPaper[3]
+  return '17만원:' + paperMoneyCount[0]+ ', 11만원:' + paperMoneyCount[1] +', 7만원:'+ paperMoneyCount[2] + ', 1만원' + paperMoneyCount[3]
 
 }
