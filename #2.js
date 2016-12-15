@@ -12,6 +12,7 @@
   3. 1473 + 3741 = 5214
   4. 5214 + 4125 = 9339
   출력 : 195 4 9339
+
   참고
   회문을 찾을 수 없는 수도 있다.
   예) 아직 증명되지는 않았지만 196은 회문을 찾을 수 없는 수이다.
@@ -27,7 +28,7 @@ function reverseNumber(inputNumber) {
   var reversedNumber = 0;
 
   for(var index = 0; index < textNumber.length; index++) {
-    splitedNumbers.push(textNumber.charAt(index));
+    splitedNumbers.push(textNumber.charAt(index)); // ['1', '9', '5']
   }
 
   splitedNumbers.reverse(splitedNumbers); // ['5', '9', '1']
