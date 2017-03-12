@@ -5,9 +5,9 @@ function findBeeHouseRoute(n) {
     var lastNumber = 1;
     var layer = 1;
 
-    while(n < lasterNumber){
+    while(n > lastNumber){
         
-        lastNumber + (6 * layer);
+        lastNumber = lastNumber + (6 * layer);
         layer++;
         
     }
