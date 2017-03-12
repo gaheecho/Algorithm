@@ -30,9 +30,9 @@ function find(inputString) {
   for(var i = 0; i < inputString.length; i++) {
 
     var slicedString = inputString.substring(0, i);
-    slicedString = slicedString.split("").reverse().join("");
+    var reversedSlicedString = slicedString = slicedString.split("").reverse().join("");
 
-    resultString = inputString + slicedString;
+    resultString = inputString + reversedSlicedString;
 
     var reversedResultString = resultString.split("").reverse().join("");
 
