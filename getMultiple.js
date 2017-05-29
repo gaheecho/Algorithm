@@ -2,11 +2,11 @@ var MAX_MULTIPLE_NUMBER = 1000;
 var MIN_MULTIPLE_NUMBER = 2;
 
 function getMultiple(base) {
-    var result         = 0;
-    var multipleItem   = {}
-    var noMultipleList = [];
+    var accumulationValue = 0;
+    var multipleItem      = {}
+    var noMultipleList    = [];
 
-    for(var index = MIN_MULTIPLE_NUMBER; result < MAX_MULTIPLE_NUMBER; index++){
+    for(var index = MIN_MULTIPLE_NUMBER; accumulationValue < MAX_MULTIPLE_NUMBER; index++){
 
         for(var multiple = MIN_MULTIPLE_NUMBER; multiple < base; multiple++) {
 
@@ -16,9 +16,9 @@ function getMultiple(base) {
 
             multipleItem[multiple] = true;
 
-            result = index * multiple;
+            accumulationValue = index * multiple;
 
-            var convertedNumber = result.toString(base);
+            var convertedNumber = accumulationValue.toString(base);
             var addedEachNumber = addEachDigit(convertedNumber, base);
 
             if(addedEachNumber % multiple !== 0) {
